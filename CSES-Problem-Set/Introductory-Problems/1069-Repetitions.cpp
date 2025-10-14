@@ -5,9 +5,10 @@ int main() {
   char ch;
   int count = 0;
   int maxcount = 0;
-  while(true) {
+  while (true) {
     std::cin >> ch;
-    if (!std::cin.good() || (ch != 'A' && ch != 'C' && ch != 'G' && ch != 'T')) {
+    if (!std::cin.good() ||
+        (ch != 'A' && ch != 'C' && ch != 'G' && ch != 'T')) {
       std::cout << maxcount << "\n";
       return EXIT_SUCCESS;
     }

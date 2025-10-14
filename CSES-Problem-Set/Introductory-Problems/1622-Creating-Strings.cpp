@@ -16,12 +16,12 @@ int main() {
   std::string in;
   std::cin >> in;
   std::map<char, int> count;
-  for (const auto& ch : in) {
+  for (const auto &ch : in) {
     count[ch]++;
   }
   int i = 0;
   uint32_t c = fact(in.size());
-  for (const auto& [ch, j] : count) {
+  for (const auto &[ch, j] : count) {
     for (int k = 0; k != j; k++) {
       in[i++] = ch;
     }
@@ -30,7 +30,7 @@ int main() {
   std::cout << c << "\n";
   std::string out = in;
   do {
-    std::cout << out  << "\n";
+    std::cout << out << "\n";
     std::next_permutation(out.begin(), out.end());
   } while (out != in);
 }

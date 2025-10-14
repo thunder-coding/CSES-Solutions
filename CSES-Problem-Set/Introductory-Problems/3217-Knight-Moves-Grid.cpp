@@ -12,7 +12,6 @@ struct QueuedItem {
 };
 std::queue<QueuedItem> queue;
 
-
 inline void solve(const int i, const int j, const int val) {
   if (i >= 1 && j >= 1 && i <= n && j <= n && !explored[i - 1][j - 1]) {
     explored[i - 1][j - 1] = true;

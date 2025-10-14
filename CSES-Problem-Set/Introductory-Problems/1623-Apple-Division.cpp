@@ -21,7 +21,7 @@ int main() {
         sum -= a[j];
       }
     }
-    ans = std::min((sum < 0) ? -sum : sum , ans);
+    ans = std::min((sum < 0) ? -sum : sum, ans);
   }
   std::cout << ans << "\n";
 }

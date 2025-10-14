@@ -4,7 +4,7 @@
 #include <string>
 int ans = 0;
 
-void solve(const std::array<std::array<bool, 8>, 8>& occupied, int row) {
+void solve(const std::array<std::array<bool, 8>, 8> &occupied, int row) {
   // for (int i = 0; i != 8; i++) {
   //   for (int j = 0; j != 8; j++) {
   //     std::cerr << (occupied[i][j] ? '*' : '.');
@@ -36,13 +36,13 @@ void solve(const std::array<std::array<bool, 8>, 8>& occupied, int row) {
 
 int main() {
   std::array<std::array<bool, 8>, 8> occupied;
-  for (int i = 0; i != 8; i++)  {
+  for (int i = 0; i != 8; i++) {
     std::string line;
     std::cin >> line;
     for (int j = 0; j != 8; j++) {
       if (line[j] == '.') {
         occupied[i][j] = false;
-      } else if (line[j] == '*'){
+      } else if (line[j] == '*') {
         occupied[i][j] = true;
       } else {
         assert(false);

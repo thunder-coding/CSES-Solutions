@@ -22,7 +22,8 @@ int main() {
         if (q % digits == 0) {
           std::cout << skipped % 10 << "\n";
         } else {
-          std::cout << ((skipped + 1) / pow10(digits - (q % digits))) % 10 << "\n";
+          std::cout << ((skipped + 1) / pow10(digits - (q % digits))) % 10
+                    << "\n";
         }
         break;
       } else {

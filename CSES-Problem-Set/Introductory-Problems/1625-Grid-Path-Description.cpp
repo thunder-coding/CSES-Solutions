@@ -20,10 +20,15 @@ inline void dfs(size_t x, size_t y, size_t i) {
     count++;
     return;
   }
-  if (x == 1 && y == N) return;
+  if (x == 1 && y == N)
+    return;
   // if (vis[N - 2][0] && vis[N - 1][1] && i != (N * N - 2)) return;
-  if (!isinbound(x - 1, y) && !isinbound(x + 1, y) && isinbound(x, y - 1) && isinbound(x, y + 1)) return;
-  if (isinbound(x - 1, y) && isinbound(x + 1, y) && !isinbound(x, y - 1) && !isinbound(x, y + 1)) return;
+  if (!isinbound(x - 1, y) && !isinbound(x + 1, y) && isinbound(x, y - 1) &&
+      isinbound(x, y + 1))
+    return;
+  if (isinbound(x - 1, y) && isinbound(x + 1, y) && !isinbound(x, y - 1) &&
+      !isinbound(x, y + 1))
+    return;
 
   vis[y - 1][x - 1] = true;
   if (isinbound(x - 1, y) && (line[i] == '?' || line[i] == 'L')) {

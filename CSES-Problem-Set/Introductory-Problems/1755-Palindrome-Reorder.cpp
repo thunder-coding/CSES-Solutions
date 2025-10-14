@@ -11,7 +11,7 @@ int main() {
   }
   std::string str;
   std::cin >> str;
-  for (const auto& ch : str) {
+  for (const auto &ch : str) {
     count[ch - 'A']++;
   }
   std::string ans(static_cast<size_t>(str.size()), ' ');

@@ -16,8 +16,8 @@ int main() {
         ch = 'A';
       }
       // This ensures alternating pattern
-      // All immediately adjacent cells will differ in their (i + j) values to be exactly one.
-      // So they will never be the same
+      // All immediately adjacent cells will differ in their (i + j) values to
+      // be exactly one. So they will never be the same
       if ((i + j) % 2 == 0) {
         ch++;
       }

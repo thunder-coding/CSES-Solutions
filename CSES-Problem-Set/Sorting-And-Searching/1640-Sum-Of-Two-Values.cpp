@@ -8,7 +8,7 @@ struct Element {
 };
 
 struct ElementComp {
-  bool operator()(const Element& l, const Element& r) const {
+  bool operator()(const Element &l, const Element &r) const {
     return l.val < r.val;
   }
 };
@@ -21,8 +21,8 @@ int main() {
     uint32_t tmp;
     std::cin >> tmp;
     a.emplace(Element{
-      .index = i + 1,
-      .val = tmp,
+        .index = i + 1,
+        .val = tmp,
     });
   }
   for (auto l = a.begin(), r = std::prev(a.end()); l != r;) {

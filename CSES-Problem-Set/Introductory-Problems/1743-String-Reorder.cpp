@@ -10,7 +10,7 @@ char prev = 26;
 
 inline uint32_t max_arr() {
   uint32_t max = 0;
-  for (uint32_t i =  0; i != 26; i++) {
+  for (uint32_t i = 0; i != 26; i++) {
     max = std::max(max, chars[i]);
   }
   return max;
@@ -24,7 +24,7 @@ inline bool solve() {
     for (uint32_t j = 0; j != 26; j++) {
       if (chars[j] != 0 && j != prev) {
         chars[j]--;
-        if (max_arr() <= ((line.size() - i) /  2)) {
+        if (max_arr() <= ((line.size() - i) / 2)) {
           found = true;
           ans[i] = j + 'A';
           i++;
@@ -35,7 +35,8 @@ inline bool solve() {
         }
       }
     }
-    if (!found) return false;
+    if (!found)
+      return false;
   }
   return true;
 }

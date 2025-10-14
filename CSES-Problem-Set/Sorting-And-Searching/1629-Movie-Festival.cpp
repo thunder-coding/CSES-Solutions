@@ -7,9 +7,7 @@ struct Movie {
 };
 
 struct MovieComp {
-  bool operator()(const Movie& l, const Movie& r) const {
-    return l.b < r.b;
-  }
+  bool operator()(const Movie &l, const Movie &r) const { return l.b < r.b; }
 };
 
 int main() {
@@ -21,8 +19,8 @@ int main() {
     uint32_t a, b;
     std::cin >> a >> b;
     movies.emplace(Movie{
-      .a = a,
-      .b = b,
+        .a = a,
+        .b = b,
     });
   }
   for (auto it = movies.begin(); it != movies.end(); it++) {

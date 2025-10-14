@@ -7,7 +7,7 @@ int main() {
   std::vector<uint32_t> p;
   std::cin >> n >> x;
   p.resize(n);
-  for (uint32_t i = 0;i != n; i++) {
+  for (uint32_t i = 0; i != n; i++) {
     std::cin >> p[i];
   }
   std::sort(p.begin(), p.end());
