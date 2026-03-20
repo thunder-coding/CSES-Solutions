@@ -44,7 +44,7 @@ int main() {
   std::ios::sync_with_stdio(false);
   std::cin.tie(nullptr);
 
-  int n;
+  uint64_t n;
   uint64_t k;
   std::cin >> n >> k;
 
@@ -76,7 +76,7 @@ int main() {
     // We should be able to optimize this slightly to just curr_count, and just decrement that.
     // I don't think the compiler will be able to figure this shit out by itself?
     uint64_t l = BIT_get(precomp, curr);
-    uint64_t r = BIT_get(precomp, n - 1) - l;
+    uint64_t r = n - i - 1 - l;
     uint64_t advance = k % (l + r) + 1;
     // Now do binary search to figure out where to fucking land on
     uint64_t left, right, search;
